@@ -42,5 +42,5 @@ gdp_df = gdp_df.rename(columns = {"GDP (Million USD)": "GDP (Billion USD)"})
 # Round values to 2 d.p.
 gdp_df[["GDP (Billion USD)"]] = np.round(gdp_df[["GDP (Billion USD)"]], 2)
 
-print(gdp_df)
-
+# Load dataframe into a csv file
+gdp_df.to_csv("./Largest_economies.csv")
